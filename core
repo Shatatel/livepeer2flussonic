@@ -1,5 +1,5 @@
 #!/bin/bash
-# jq need for JSON processing, requires to be installed over "sudo apt install jq" for example
+# jq needed for JSON processing, requires to be installed over "sudo apt install jq" for example
 broadcasters=$(curl https://livepeer.live/api/broadcaster | jq -r '.[].address')
 for broadcaster in $broadcasters; do
    URL="$broadcaster/P360p30fps16x9.m3u8"
